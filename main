@@ -1,0 +1,19 @@
+public class SquareDigit {
+
+  public int squareDigits(int n) {
+    // Set result to empty String
+    String result = ""; 
+
+    // Get modulo of n, then square it and concatenate to result
+    // divide number by 10 and repeat
+    while (n != 0) {
+      int num = n % 10 ;
+      result = num*num + result ;
+      n /= 10 ;
+    }
+
+    // Parse the result to get an integer to return
+    return Integer.parseInt(result) ;
+  }
+
+}
